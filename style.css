@@ -1,0 +1,84 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clock{
+ height: 400px;
+ width: 400px;
+ border-radius: 50%;
+ background-color: rgba(0, 0, 0, .15);
+ position: absolute;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ top: 0;
+ margin: auto;
+}
+.circle
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:red;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+}
+.hour
+{
+    width: 8px;
+    height: 120px;
+    background-color: blue;
+    border-radius: 4px;
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    animation: hourNeedle 43200s infinite;
+    transform-origin: bottom center;
+    animation-timing-function: linear;
+}
+@keyframes hourNeedle{
+    from{ transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+
+.minute
+{
+    width: 6px;
+    height: 140px;
+    background-color: red;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    animation: minuteNeedle 3600s infinite;
+    transform-origin: bottom center;
+    animation-timing-function: linear;
+}
+@keyframes minuteNeedle{
+    from{ transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+.second
+{
+    width: 5px;
+    height: 160px;
+    background-color: purple;
+    border-radius: 6px;
+    position: absolute;
+    top: 40px;
+    left: 200px;
+    animation: secondNeedle 60s infinite;
+    transform-origin: bottom center;
+    animation-timing-function: linear;
+    
+}
+@keyframes secondNeedle{
+    from{ transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
